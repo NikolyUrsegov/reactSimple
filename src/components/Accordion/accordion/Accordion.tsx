@@ -7,12 +7,12 @@ export type AccordionPropsType = {
   /**
    * Elements that are showed when accordion is opened (not collapsed)
    */
-  items: UserType[]
+  items?: UserType[]
   /**
    * Callback that is colled when any item clicked
    * @param value is value of clicked item
    */
-  onClick: (value: any) => void
+  onClick?: (value: any) => void
   /**
    *  optionak color of header text
    */
@@ -34,21 +34,21 @@ type AccordionTitlePropsType = {
 };
 
 type AccordionBodyPropsType = {
-  items: UserType[]
-  onClick: (value: any) => void
+  items?: UserType[]
+  onClick?: (value: any) => void
 };
 
 function AccordionTitle(props: AccordionTitlePropsType) {
   return <h3 style={{ color: props.color ? props.color : 'black' }}
-    onClick={props.onChange}>{props.title}</h3>;
+    onClick={(e) =>props.onChange()}>{props.title}</h3>;
 }
 
 function AccordionBody(props: AccordionBodyPropsType) {
   return (
     <ul>
-      {props.items.map((u) => {
-        return <li key={u.id} onClick={() => { props.onClick(u.name) }}>{u.name}</li>
-      })}
+      <li>1</li>
+      <li>2</li>
+      <li>3</li>
     </ul>
   );
 }

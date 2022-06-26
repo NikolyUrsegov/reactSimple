@@ -4,7 +4,7 @@ type AccordionPropsType = {
   titleValue: string;
 };
 
-function UncontrolledAccordion(props: AccordionPropsType) {
+export function UncontrolledAccordion(props: AccordionPropsType) {
   let [collapsed, setCollapsed] = useState(false)
 
   return <>
@@ -18,7 +18,7 @@ type AccordionTitlePropsType = {
   onClick: () => void
 };
 
-function AccordionTitle(props: AccordionTitlePropsType) {
+ function AccordionTitle(props: AccordionTitlePropsType) {
   return <h3 onClick={props.onClick}>{props.title}</h3>;
 }
 
@@ -34,4 +34,3 @@ function AccordionBody() {
   );
 }
 
-export default UncontrolledAccordion;

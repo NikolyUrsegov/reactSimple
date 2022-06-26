@@ -1,10 +1,6 @@
 import { useState } from "react";
 
-type RatingProps = {
-
-};
-
-function UncontrolleRating(props: RatingProps) {
+export function UncontrolleRating() {
   let [value, setValue] = useState(4)
   return (
     <div>
@@ -29,4 +25,3 @@ function Star(props: StarPropsType) {
   </span >
 }
 
-export default UncontrolleRating;
