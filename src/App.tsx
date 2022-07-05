@@ -13,13 +13,10 @@ export type UserType = {
 function App() {
 
     let [ratingValue, setRatingValue] = useState<number>(0)
-    let [accordionCollapsed, setaccordionCollapsed] = useState<boolean>(false)
+    let [accordionCollapsed, setAccordionCollapsed] = useState<boolean>(false)
     let [switchOn, setSwitchOn] = useState(false)
 
 
-    const onClick = () => {
-        alert('Hi')
-    }
     const users: UserType[] = [
         {id: 1, name: 'Kiryll'},
         {id: 2, name: 'Andry'},
@@ -34,9 +31,9 @@ function App() {
 
             <Accordion titleValue={'Menu'}
                        collapsed={accordionCollapsed}
-                       items={users}
-                       onChange={() => setaccordionCollapsed(!accordionCollapsed)}
-                       onClick={onClick}
+                       items={[]}
+                       onChange={() => setAccordionCollapsed(!accordionCollapsed)}
+                       onClick={(id) => alert(id)}
             />
 
 
