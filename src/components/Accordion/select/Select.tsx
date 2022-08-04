@@ -15,8 +15,9 @@ const Select = (props: SelectPropsType) => {
     let titleItem = props.item.filter(el => el.value === props.value)
 
     const classDiv = {
-        padding: "10px",
+        padding: "3px",
         width: "50px",
+        fontSize: "12px",
         border: "1px solid black",
         background: "white"
     }
