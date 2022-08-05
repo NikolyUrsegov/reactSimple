@@ -4,6 +4,7 @@ import {Accordion} from "./components/Accordion/accordion/Accordion";
 import {UncontrolledOnOff} from "./components/Accordion/onOff/UncontrolledOnOff";
 import Rating from "./components/Accordion/Rating/Rating";
 import {UncontrolleRating} from "./components/Accordion/Rating/UncontrolledRating";
+import AnalogClock from "./components/Clock/AnalogClock";
 
 export type UserType = {
     id: number,
@@ -48,6 +49,7 @@ function App() {
       <Rating value={3} />
       <Rating value={4} />
       <Rating value={5} /> */}
+            <AnalogClock/>
         </div>
     );
 }

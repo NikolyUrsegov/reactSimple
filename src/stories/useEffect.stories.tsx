@@ -31,3 +31,34 @@ export const useEffectExample1 = () => {
         </div>
     )
 }
+
+export const Example2 = () => {
+    console.log('Example2')
+    const [counter, setCounter] = useState(0)
+    const [fake, setFake] = useState(0)
+
+    // useEffect(() => {
+    //     setTimeout(() => {
+    //         console.log('setTimout')
+    //         document.title = counter.toString()
+    //     }, 1000)
+    //
+    // }, [counter])
+
+    useEffect(() => {
+        setInterval(() => {
+            console.log('setInterval')
+            setCounter(state => state + 1)
+        }, 1000)
+
+    }, [])
+
+
+    return (
+        <div>
+            {/*<button onClick={() => setCounter(counter + 1)}> + counter</button>*/}
+            {/*<button onClick={() => setFake(fake + 1)}> + fake</button>*/}
+            Counter : {counter} - Fake : {fake}
+        </div>
+    )
+}
